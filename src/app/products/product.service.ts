@@ -7,7 +7,8 @@ import { tap, catchError } from 'rxjs/operators';
     providedIn: 'root'
 })
 export class ProductService {
-  private productListUrl = 'https://localhost:5001/weatherforecast/products'; 
+  //private productListUrl = 'https://localhost:5001/weatherforecast/products'; 
+  private productListUrl = 'api/products/products.json';
   constructor(private http: HttpClient){
 
   }
@@ -26,6 +27,4 @@ export class ProductService {
     console.error(errMessage);
     return throwError(errMessage);
   }
-
-
 }
